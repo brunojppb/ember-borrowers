@@ -1,0 +1,7 @@
+{{link-to 'Friends list' 'friends'}}
+<ul>
+  <li>{{link-to 'edit' 'friends.edit' model}} | <a href="#"{{action 'delete' model}}>Delete</a> </li>
+  <li>{{model.fullName}}</li>
+  <li>{{model.email}}</li>
+  <li>@{{model.twitter}}</li>
+</ul>
