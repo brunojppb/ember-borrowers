@@ -12,13 +12,11 @@
   </thead>
   <tbody>
     {{#each model as |article|}}
-      <tr>
-        <td>{{article.description}}</td>
-        <td>{{article.notes}}</td>
-        <td>{{article.createdAt}}</td>
-        <td></td>
-        <td></td>
-      </tr>
+      {{articles/article-row
+        article=article
+        articleStates=possibleStates
+        save="save"
+      }}
     {{/each}}
   </tbody>
 </table>
