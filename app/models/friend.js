@@ -13,5 +13,5 @@ export default DS.Model.extend({
                     }
                   }),
   // Associations
-  articles:       DS.hasMany('article')
+  articles:       DS.hasMany('article', { async: true })
 });
