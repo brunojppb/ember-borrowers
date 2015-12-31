@@ -1,7 +1,19 @@
-{{link-to 'Friends list' 'friends'}}
-<ul>
-  <li>{{link-to 'edit' 'friends.edit' model}} | <a href="#"{{action 'delete' model}}>Delete</a> </li>
-  <li>{{model.fullName}}</li>
-  <li>{{model.email}}</li>
-  <li>@{{model.twitter}}</li>
-</ul>
+
+<div class="card friend-profile">
+  <p>{{model.firstName}}</p>
+  <p>{{model.lastName}}</p>
+  <p>{{model.email}}</p>
+  <p>{{model.twitter}}</p>
+  {{!-- We are creating a link to articles.new without passing      --}}
+  {{!-- the friend object as the param. why?                        --}}
+  {{!-- Because we are in the context of a friend 'friends/{id}'    --}}
+  {{!-- But, if we were in a friends.index route, we must pass the  --}}
+  {{!-- friend as the param for the link                            --}}
+  <p>{{link-to 'Lend new Article' 'articles.new'}}</p>
+  <p>{{link-to 'edit' 'friends.edit' model}}</p>
+  <p><a href="#"{{action 'delete' model}}>Delete</a></p>
+</div>
+
+<div class="articles-controller">
+  {{outlet}}
+</div>
