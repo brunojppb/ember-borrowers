@@ -1,5 +1,7 @@
-export default function dateHelpers() {
-  formatDate: function(date, format) {
-    return window.moment(date).format(format);
-  }
+function formatDate(date, format) {
+  return window.moment(date).format(format);
 }
+
+export {
+  formatDate
+};
